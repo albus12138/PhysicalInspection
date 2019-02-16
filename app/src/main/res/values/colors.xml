@@ -3,40 +3,4 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    
-    <color name="color_黑">#ff000000</color>
-    <color name="color_绿">#00ff00</color>
-    <color name="color_红">#DC143C</color>
-    <color name="color_蓝">#36c7d1</color>
-    <color name="color_黄">#FFFF00</color>
-    <color name="color_紫">#FF00FF</color>
-    <color name="color_白">#f7f8f8</color>
-    <color name="color_亮白">#ffffff</color>
-
-    <color name="color_海军蓝">#23238E</color>
-    <color name="color_深藏青">#2F2F4F</color>
-    <color name="color_中木色">#A68064</color>
-    <color name="color_中紫红">#DB7093</color>
-    <color name="color_中绿松石">#70DBDB</color>
-    <color name="color_中春绿">#7FFF00</color>
-    <color name="color_中石板蓝">#7F00FF</color>
-    <color name="color_中海绿">#426F42</color>
-    <color name="color_中兰花">#9370DB</color>
-    <color name="color_中鲜黄">#EAEAAE</color>
-    <color name="color_中森林绿">#6B8E23</color>
-    <color name="color_中蓝色">#3232CD</color>
-
-    <color name="color_中海蓝">#32CD99</color>
-    <color name="color_褐红">#8E236B</color>
-    <color name="color_橘黄">#E47833</color>
-    <color name="color_石灰绿">#32CD32</color>
-    <color name="color_浅木">#E9C2A6</color>
-    <color name="color_浅钢蓝">#8F8FBD</color>
-    <color name="color_浅灰">#A8A8A8</color>
-    <color name="color_浅蓝">#C0D9D9</color>
-    <color name="color_土黄">#9F9F5F</color>
-    <color name="color_印度红">#4E2F2F</color>
-    <color name="color_猎人绿">#215E21</color>
-    <color name="color_青黄">#93DB70</color>
-
 </resources>
