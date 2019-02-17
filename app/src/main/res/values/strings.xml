@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">PhysicalInspection</string>
-    <string name="title_item_detail">Item Detail</string>
+    <string name="title_item_detail">功能详情</string>
+    <string name="app_title">人体检测系统</string>
 </resources>

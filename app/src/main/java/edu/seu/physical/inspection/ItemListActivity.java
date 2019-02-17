@@ -13,36 +13,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
 
 import edu.seu.physical.inspection.dummy.DummyContent;
 
 /**
- * An activity representing a list of Items. This activity
- * has different presentations for handset and tablet-size devices. On
- * handsets, the activity presents a list of items, which when touched,
- * lead to a {@link ItemDetailActivity} representing
- * item details. On tablets, the activity presents the list of items and
- * item details side-by-side using two vertical panes.
+ * 用于显示可用条目列表, 区分屏幕宽度显示不同内容
+ * 点击其中某个条目时, 通过 {@link ItemDetailActivity} 展示条目细节
  */
 public class ItemListActivity extends AppCompatActivity {
 
-    /**
-     * Whether or not the activity is in two-pane mode, i.e. running on a tablet
-     * device.
-     */
-    private boolean mTwoPane;
+    private boolean mTwoPane;  // 是否开启双栏面板模式
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_list);
 
+        // 上方标题栏
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar.setTitle(R.string.app_title);
         setSupportActionBar(toolbar);
-        toolbar.setTitle(getTitle());
 
+        // 右下角浮动按钮
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,11 +47,8 @@ public class ItemListActivity extends AppCompatActivity {
             }
         });
 
+        // 宽屏(横屏)模式开启两栏面板; 窄屏(竖屏)模式仅一栏, 采用切换视图方式显示
         if (findViewById(R.id.item_detail_container) != null) {
-            // The detail container view will be present only in the
-            // large-screen layouts (res/values-w900dp).
-            // If this view is present, then the
-            // activity should be in two-pane mode.
             mTwoPane = true;
         }
 
