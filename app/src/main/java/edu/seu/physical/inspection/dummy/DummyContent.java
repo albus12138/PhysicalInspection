@@ -23,49 +23,59 @@ public class DummyContent {
      */
     public static final Map<String, DummyItem> ITEM_MAP = new HashMap<String, DummyItem>();
 
+    public enum Functions {
+        GENERAL("信息概览", "general"), BLOOD_PRESSURE("血压详情", "blood_pressure");
+
+        private String title;
+        private String name;
+
+        private Functions(String title, String name) {
+            this.name = name;
+            this.title = title;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+
+        @Override
+        public String toString() {
+            return this.name + ":" + this.title;
+        }
+    }
+
     private static final int COUNT = 25;
 
     static {
-        // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
+        for (Functions func: Functions.values()) {
+            DummyContent.addItem(new DummyContent.DummyItem(func.getName(), func.getTitle()));
         }
     }
 
     private static void addItem(DummyItem item) {
         ITEMS.add(item);
-        ITEM_MAP.put(item.id, item);
-    }
-
-    private static DummyItem createDummyItem(int position) {
-        return new DummyItem(String.valueOf(position), "功能 " + position, makeDetails(position));
-    }
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("详细信息: ");
-        builder.append("\n这里是功能 ");
-        builder.append(position);
-        return builder.toString();
+        ITEM_MAP.put(item.name, item);
     }
 
     /**
      * A dummy item representing a piece of content.
      */
     public static class DummyItem {
-        public final String id;
-        public final String content;
-        public final String details;
+        public final String name;
+        public final String title;
 
-        public DummyItem(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
+        private DummyItem(String name, String title) {
+            this.name = name;
+            this.title = title;
         }
 
         @Override
         public String toString() {
-            return content;
+            return title;
         }
     }
 }
