@@ -57,6 +57,19 @@ public class ItemDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        if (mItem.name.equals("blood_pressure")) {
+            View rootView = inflater.inflate(R.layout.blood_pressure_detail, container, false);
+
+            TextView low_value = (TextView) rootView.findViewById(R.id.low_value);
+            TextView high_value = (TextView) rootView.findViewById(R.id.high_value);
+
+            low_value.setText("80");
+            high_value.setText("120");
+
+            return rootView;
+        }
+
         View rootView = inflater.inflate(R.layout.item_detail, container, false);
 
         // Show the dummy content as text in a TextView.

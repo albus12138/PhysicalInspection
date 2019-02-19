@@ -2,4 +2,7 @@
     <string name="app_name">PhysicalInspection</string>
     <string name="title_item_detail">功能详情</string>
     <string name="app_title">人体检测系统</string>
+    <string name="blood_pressure_high_value_description">收缩压</string>
+    <string name="blood_pressure_low_value_description">舒张压</string>
+    <string name="start_blood_pressure_measure">开始测量</string>
 </resources>
